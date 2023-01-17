@@ -6,7 +6,9 @@ function getAllDirectors(moviesArray) {
     const allDirectors = moviesArray.map(theMovie => {
       return theMovie.director
     })  
-    return allDirectors
+    const set = new set(allDirectors)
+
+    return Array.from(set)
 }
 
 // Iteration 2: Steven Spielberg. The best? - How many drama movies did STEVEN SPIELBERG direct?
@@ -14,17 +16,22 @@ function howManyMovies(moviesArray) {
   const stvSp = moviesArray.filter(movie =>  {
     return movie.director === 'Steven Spielberg' && movie.genre.includes('Drama');
   })
+
+  if (!stvSp.length){
+    return 0
+  }
   return stvSp.length
 }
 
 // Iteration 3: All scores average - Get the average of all scores with 2 decimals
 function scoresAverage(moviesArray) {
+  
 
 }
 
 // Iteration 4: Drama movies - Get the average of Drama Movies
 function dramaMoviesScore(moviesArray) {
-  // tenho que usar o filter 2vezes, deve ter um array dentro do objeto ?
+
 }
 
 // Iteration 5: Ordering by year - Order by year, ascending (in growing order)
